@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* Override any system preference media queries */
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark) {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --toast-bg: #fff;
+    --toast-color: #333;
+  }
+}
+
+:root {
+  /* Light mode variables - with lighter backgrounds */
+  --background: 0 0% 100%; /* Pure white */
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%; /* Pure white */
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%; /* Pure white */
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 99%; /* Lighter secondary */
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 99%; /* Lighter muted */
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 99%; /* Lighter accent */
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 95%; /* Lighter border */
+  --input: 214.3 31.8% 95%; /* Lighter input */
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+  --toast-bg: #fff;
+  --toast-color: #333;
+}
+
+.dark {
+  /* Dark mode variables */
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 48%;
+  --toast-bg: #333;
+  --toast-color: #fff;
+}
+
+/* Global styles */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply dark mode styling to other elements */
+.dark .bg-white,
+.dark .bg-gray-50,
+.dark .bg-gray-100 {
+  background-color: hsl(var(--background)) !important;
+}
+
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700 {
+  color: hsl(var(--foreground)) !important;
+}
+
+.dark .text-gray-600,
+.dark .text-gray-500 {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.dark .border-gray-200,
+.dark .border-gray-300 {
+  border-color: hsl(var(--border)) !important;
+}
+
+.dark .shadow-sm,
+.dark .shadow-md {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Fix for specific components */
+.dark .bg-indigo-600 {
+  background-color: hsl(224.3 76.3% 48%) !important;
+}
+
+.dark .bg-indigo-100 {
+  background-color: hsl(224.3 76.3% 15%) !important;
+}
+
+.dark .hover\:bg-indigo-700:hover {
+  background-color: hsl(224.3 76.3% 40%) !important;
+}
+
+.dark .hover\:bg-indigo-200:hover {
+  background-color: hsl(224.3 76.3% 20%) !important;
+}
+
+.dark .text-indigo-600,
+.dark .text-indigo-700 {
+  color: hsl(224.3 76.3% 60%) !important;
+}
